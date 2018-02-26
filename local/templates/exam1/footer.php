@@ -8,34 +8,25 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="side">
                     <?if($APPLICATION->GetCurDir()!='/'):?>
                         <!-- side menu -->
-                        <div class="side-block side-menu">
-                            <div class="title-block">Навигация</div>
-                            <div class="menu-block">
-                                <ul>
-                                    <li><a href="">Кухни</a>
-                                    </li>
-                                    <li><a href="">Гарнитуры</a>
-                                    </li>
-                                    <li class="selected">
-                                        <a href="">Спальни</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Шкафы</a>
-                                    </li>
-                                    <li><a href="">Столы</a>
-                                    </li>
-                                    <li><a href="">Стулья</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Прихожие</a>
-                                    </li>
-                                    <li><a href="">Диваны</a>
-                                    </li>
-                                    <li><a href="">Кресла</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "left",
+                            array(
+                                "COMPONENT_TEMPLATE" => "left",
+                                "ROOT_MENU_TYPE" => "left",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_TIME" => "3600000",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => array(
+                                ),
+                                "MAX_LEVEL" => "1",
+                                "CHILD_MENU_TYPE" => "left",
+                                "USE_EXT" => "Y",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "N"
+                            ),
+                            false
+                        );?>
                         <!-- /side menu -->
                     <?endif?>
                     <!-- side anonse -->
