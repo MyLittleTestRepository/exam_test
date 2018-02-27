@@ -1,5 +1,5 @@
-/bitrix/*
-/.idea/*
-/**/.DS_Store
-/**/test.php
-/upload/*
+/bitrix
+/upload/tmp
+/.idea
+.DS_Store
+test.php
