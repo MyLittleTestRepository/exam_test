@@ -45,7 +45,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "reviews",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",

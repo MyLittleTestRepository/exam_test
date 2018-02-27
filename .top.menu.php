@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Продукция", 
-		"products/", 
+		"products/",
 		Array(), 
 		Array(), 
 		"" 
@@ -37,14 +37,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Отзывы", 
-		"/rew/", 
+		"rew/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Поиск", 
-		"/search/", 
+		"search/", 
 		Array(), 
 		Array(), 
 		"" 
