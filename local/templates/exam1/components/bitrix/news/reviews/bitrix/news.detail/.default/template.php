@@ -36,15 +36,14 @@ $this->setFrameMode(true);
     <div class="exam-review-doc">
         <p><?= $arResult['PROPERTIES']['DOCS']['NAME'] ?>:</p>
         <? if ($arResult['PROPERTIES']['DOCS']['MULTIPLE'] == 'Y'): //is more docs?>
-            <? foreach ($arResult['PROPERTIES']['DOCS']['VALUE'] as $file_id): ?>
-                <? $file = CFile::GetFileArray($file_id) ?>
+            <? foreach ($arResult['DISPLAY_PROPERTIES']['DOCS']['FILE_VALUE'] as $file): ?>
                 <div class="exam-review-item-doc"><img class="rew-doc-ico"
                                                        src="<?= SITE_TEMPLATE_PATH . '/img/icons/pdf_ico_40.png' ?>"><a
                             href="<?= $file['SRC'] ?>"><?= $file['ORIGINAL_NAME'] ?></a>
                 </div>
             <? endforeach; ?>
         <? else: //is one docs?>
-            <? $file = CFile::GetFileArray($arResult['PROPERTIES']['DOCS']['VALUE']) ?>
+            <? $file = $arResult['DISPLAY_PROPERTIES']['DOCS']['FILE_VALUE'] ?>
             <div class="exam-review-item-doc"><img class="rew-doc-ico"
                                                    src="<?= SITE_TEMPLATE_PATH . '/img/icons/pdf_ico_40.png' ?>"><a
                         href="<?= $file['SRC'] ?>"><?= $file['ORIGINAL_NAME'] ?></a>
