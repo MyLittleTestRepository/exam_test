@@ -18,8 +18,8 @@
                         <? if ($arItem["IS_PARENT"]): ?>
                         <? if ($arItem["DEPTH_LEVEL"] == 1 or $arItem["PERMISSION"] > "D"): ?>
                         <li><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a>
-                            <ul><? if (file_exists(\Bitrix\Main\Application::getDocumentRoot().$arItem["LINK"].'.top_menu_text.html')): ?>
-                                    <div class="menu-text"><?require(\Bitrix\Main\Application::getDocumentRoot().$arItem["LINK"].'.top_menu_text.html')?></div>
+                            <ul><? if (!empty($arItem['PARAMS']['ATEXT'])): ?>
+                                    <div class="menu-text"><?=$arItem['PARAMS']['ATEXT']?></div>
                                 <? endif ?>
                                 <? endif ?>
                                 <? else: ?>
