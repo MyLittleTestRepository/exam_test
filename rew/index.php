@@ -92,7 +92,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "index.php",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#.php",
+			"detail" => "#ELEMENT_CODE#",
 		)
 	),
 	false
